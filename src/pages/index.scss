@@ -1,0 +1,42 @@
+.circle {
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(
+    40deg,
+    #000000 15%,
+    #771676 61%,
+    #ff00c8 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    40deg,
+    #000000 15%,
+    #771676 61%,
+    #ff00c8 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    40deg,
+    #000000 15%,
+    #771676 61%,
+    #ff00c8 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ff00c8',GradientType=1 );
+
+  width: 75vw;
+  height: 75vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10%;
+  padding-top: 15%;
+
+  .title {
+    color: #fff;
+    letter-spacing: 1rem;
+    width: 10.5rem;
+
+    & h1 {
+      font-size: 3rem;
+      line-height: 5rem;
+      text-align: justify;
+    }
+  }
+}
