@@ -10,6 +10,8 @@ function SEO({ description, lang, meta, keywords, title }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
+        const viewPortDescription =
+          "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
         return (
           <Helmet
             htmlAttributes={{
@@ -18,6 +20,10 @@ function SEO({ description, lang, meta, keywords, title }) {
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
+              {
+                name: `viewport`,
+                content: viewPortDescription,
+              },
               {
                 name: `description`,
                 content: metaDescription,

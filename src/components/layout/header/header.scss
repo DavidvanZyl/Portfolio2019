@@ -1,0 +1,15 @@
+.header {
+  &__content {
+    margin: 0 auto;
+    padding: 0.2rem 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
+
+  .link {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+  }
+}

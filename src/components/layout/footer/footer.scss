@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 10rem 2rem 2rem;
+
+  & .socialLinks {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & .socialButton {
+      flex: 1 1 25%;
+    }
+  }
+}
