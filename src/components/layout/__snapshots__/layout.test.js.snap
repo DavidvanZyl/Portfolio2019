@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+<StaticQuery
+  data={
+    Object {
+      "data": Object {
+        "site": Object {
+          "siteMetadata": Object {
+            "title": "David van Zyl",
+          },
+        },
+      },
+    }
+  }
+  query="755544856"
+  render={[Function]}
+/>
+`;

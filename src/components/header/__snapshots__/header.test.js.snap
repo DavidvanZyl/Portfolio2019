@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="header__content"
+  >
+    <p
+      style={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      <ForwardRef
+        className="link"
+        to="/"
+      />
+    </p>
+    <p
+      style={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      <ForwardRef
+        className="link"
+        to="/"
+      >
+        Download my CV
+      </ForwardRef>
+    </p>
+  </div>
+</header>
+`;
