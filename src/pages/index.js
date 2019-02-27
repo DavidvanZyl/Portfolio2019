@@ -1,6 +1,6 @@
 import React from "react"
-import ProjectList from "../components/project-list/project-list"
-import BlogList from "../components/blog-list/blog-list"
+import ProjectList from "../components/projects/project-list/project-list"
+import BlogList from "../components/blogs/blog-list/blog-list"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 

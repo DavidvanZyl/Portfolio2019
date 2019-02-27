@@ -1,7 +1,7 @@
 import React from "react"
 
-import SocialLinks from "../social-links/social-links"
-import SocialButton from "../social-button/social-button"
+import SocialLinks from "../../social/social-links/social-links"
+import SocialButton from "../../social/social-button/social-button"
 
 import "./footer.scss"
 
