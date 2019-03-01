@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="footer__copy"
+  >
+    © 
+    2019
+    , David van Zyl
+  </div>
+  <_default>
+    <div>
+      <SocialButton
+        title="Github"
+        url="https://github.com/DavidvanZyl"
+      />
+      <SocialButton
+        title="LinkedIn"
+        url="https://www.linkedin.com/in/davidvzyl"
+      />
+    </div>
+    <div>
+      <SocialButton
+        title="Medium"
+        url="https://medium.com/"
+      />
+      <SocialButton
+        title="Email me!"
+        url="mailto:info@davidvanzyl.io"
+      />
+    </div>
+  </_default>
+</footer>
+`;

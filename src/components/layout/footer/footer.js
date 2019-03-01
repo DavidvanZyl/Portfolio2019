@@ -7,12 +7,21 @@ import "./footer.scss"
 
 const Footer = ({ siteTitle }) => (
   <footer className="footer">
-    <div>© {new Date().getFullYear()}, David van Zyl</div>
+    <div className="footer__copy">
+      © {new Date().getFullYear()}, David van Zyl
+    </div>
     <SocialLinks>
-      <SocialButton url="https://github.com/DavidvanZyl" title="Github" />
-      <SocialButton url="https://www.instagram.com/" title="LinkedIn" />
-      <SocialButton url="https://medium.com/" title="Medium" />
-      <SocialButton url="mailto:info@davidvanzyl.io" title="Email me!" />
+      <div>
+        <SocialButton url="https://github.com/DavidvanZyl" title="Github" />
+        <SocialButton
+          url="https://www.linkedin.com/in/davidvzyl"
+          title="LinkedIn"
+        />
+      </div>
+      <div>
+        <SocialButton url="https://medium.com/" title="Medium" />
+        <SocialButton url="mailto:info@davidvanzyl.io" title="Email me!" />
+      </div>
     </SocialLinks>
   </footer>
 )

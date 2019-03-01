@@ -1,0 +1,17 @@
+.list {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0 1rem;
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    grid-gap: 1rem;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 10vh;
+  }
+}

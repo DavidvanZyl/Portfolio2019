@@ -1,6 +1,7 @@
 import React from "react"
-import ProjectList from "../components/projects/project-list/project-list"
-import BlogList from "../components/blogs/blog-list/blog-list"
+import ProjectCard from "../components/projects/project-card/project-card"
+import BlogEntry from "../components/blogs/blog-entry/blog-entry"
+import List from "../components/blogs/blog-list/blog-list"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 
@@ -24,17 +25,70 @@ const IndexPage = ({ data }) => (
         </div>
       </div>
     </div>
-    <ProjectList projects={projects} />
-    <BlogList blogs={projects} />
+    <List list_title="Projects" tag_name={ProjectCard} items={projects} />
+    <List list_title="Blogs" tag_name={BlogEntry} items={blogs} />
   </Layout>
 )
 
 const projects = [
   {
-    src: "https://unsplash.com/photos/5fNmWej4tAA",
+    src: "https://picsum.photos/400/300?image=0",
     image_alt: "People on laptops",
+    project_title: "Build Tools Collection",
     project_desc: "Build Tools Collection",
     project_author: "David van Zyl",
+  },
+  {
+    src: "https://picsum.photos/400/300?image=0",
+    image_alt: "People on laptops",
+    project_title: "Build Tools Collection",
+    project_desc: "Build Tools Collection",
+    project_author: "David van Zyl",
+  },
+  {
+    src: "https://picsum.photos/400/300?image=0",
+    image_alt: "People on laptops",
+    project_title: "Build Tools Collection",
+    project_desc: "Build Tools Collection",
+    project_author: "David van Zyl",
+  },
+  {
+    src: "https://picsum.photos/400/300?image=0",
+    image_alt: "People on laptops",
+    project_title: "Build Tools Collection",
+    project_desc: "Build Tools Collection",
+    project_author: "David van Zyl",
+  },
+]
+
+const blogs = [
+  {
+    src: "https://picsum.photos/400/300?image=0",
+    image_alt: "People on laptops",
+    blog_title: "Build Tools Collection",
+    blog_desc: "Build Tools Collection",
+    blog_author: "David van Zyl",
+  },
+  {
+    src: "https://picsum.photos/400/300?image=0",
+    image_alt: "People on laptops",
+    blog_title: "Build Tools Collection",
+    blog_desc: "Build Tools Collection",
+    blog_author: "David van Zyl",
+  },
+  {
+    src: "https://picsum.photos/400/300?image=0",
+    image_alt: "People on laptops",
+    blog_title: "Build Tools Collection",
+    blog_desc: "Build Tools Collection",
+    blog_author: "David van Zyl",
+  },
+  {
+    src: "https://picsum.photos/400/300?image=0",
+    image_alt: "People on laptops",
+    blog_title: "Build Tools Collection",
+    blog_desc: "Build Tools Collection",
+    blog_author: "David van Zyl",
   },
 ]
 

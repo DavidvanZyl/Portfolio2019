@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogEntry renders correctly 1`] = `
+<div
+  className="project"
+>
+  <div
+    className="project__image"
+  >
+    <img
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <p
+    className="project__title"
+  />
+</div>
+`;
