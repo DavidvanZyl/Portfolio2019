@@ -1,9 +1,9 @@
 import React from "react"
-import ProjectCard from "../components/projects/project-card/project-card"
-import BlogEntry from "../components/blogs/blog-entry/blog-entry"
-import List from "../components/blogs/blog-list/blog-list"
-import Layout from "../components/layout/layout"
-import SEO from "../components/seo"
+import ProjectCard from "./../components/project-card/project-card"
+import BlogEntry from "./../components/blog-entry/blog-entry"
+import List from "./../components/component-list/component-list"
+import Layout from "./../components/layout/layout"
+import SEO from "./../components/seo"
 
 import topography from "./../images/topography.png"
 
@@ -32,30 +32,34 @@ const IndexPage = ({ data }) => (
 
 const projects = [
   {
-    src: "https://picsum.photos/400/300?image=0",
+    src: "https://picsum.photos/600/300?image=0",
     image_alt: "People on laptops",
     project_title: "Build Tools Collection",
+    project_link: "Build-Tools-Collection",
     project_desc: "Build Tools Collection",
     project_author: "David van Zyl",
   },
   {
-    src: "https://picsum.photos/400/300?image=0",
+    src: "https://picsum.photos/600/300?image=0",
     image_alt: "People on laptops",
     project_title: "Build Tools Collection",
+    project_link: "Build-Tools-Collection",
     project_desc: "Build Tools Collection",
     project_author: "David van Zyl",
   },
   {
-    src: "https://picsum.photos/400/300?image=0",
+    src: "https://picsum.photos/600/300?image=0",
     image_alt: "People on laptops",
     project_title: "Build Tools Collection",
+    project_link: "Build-Tools-Collection",
     project_desc: "Build Tools Collection",
     project_author: "David van Zyl",
   },
   {
-    src: "https://picsum.photos/400/300?image=0",
+    src: "https://picsum.photos/600/300?image=0",
     image_alt: "People on laptops",
     project_title: "Build Tools Collection",
+    project_link: "Build-Tools-Collection",
     project_desc: "Build Tools Collection",
     project_author: "David van Zyl",
   },
@@ -63,28 +67,28 @@ const projects = [
 
 const blogs = [
   {
-    src: "https://picsum.photos/400/300?image=0",
+    src: "https://picsum.photos/600/300?image=0",
     image_alt: "People on laptops",
     blog_title: "Build Tools Collection",
     blog_desc: "Build Tools Collection",
     blog_author: "David van Zyl",
   },
   {
-    src: "https://picsum.photos/400/300?image=0",
+    src: "https://picsum.photos/600/300?image=0",
     image_alt: "People on laptops",
     blog_title: "Build Tools Collection",
     blog_desc: "Build Tools Collection",
     blog_author: "David van Zyl",
   },
   {
-    src: "https://picsum.photos/400/300?image=0",
+    src: "https://picsum.photos/600/300?image=0",
     image_alt: "People on laptops",
     blog_title: "Build Tools Collection",
     blog_desc: "Build Tools Collection",
     blog_author: "David van Zyl",
   },
   {
-    src: "https://picsum.photos/400/300?image=0",
+    src: "https://picsum.photos/600/300?image=0",
     image_alt: "People on laptops",
     blog_title: "Build Tools Collection",
     blog_desc: "Build Tools Collection",

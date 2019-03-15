@@ -3,16 +3,16 @@ import React from "react"
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/seo"
 
-import "./projects.scss"
-import ProjectCard from "../../components/project-card/project-card"
-import Hero from "../../components/hero/hero"
+import "./blogs.scss"
 import List from "../../components/component-list/component-list"
+import Hero from "../../components/hero/hero"
+import BlogEntry from "../../components/blog-entry/blog-entry"
 
-const Projects = () => (
+const Blogs = () => (
   <Layout>
-    <SEO title="Projects" />
-    <div className="projectPage">
-      <Hero title="Some not boring project" />
+    <SEO title="Blogs" />
+    <div className="blogPage">
+      <Hero title="Some not boring blog" />
       <p>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
@@ -29,43 +29,39 @@ const Projects = () => (
         voluptas nulla pariatur?
       </p>
     </div>
-    <List list_title="Other Projects" tag_name={ProjectCard} items={projects} />
+    <List list_title="Other Blog Posts" tag_name={BlogEntry} items={blogs} />
   </Layout>
 )
 
-export default Projects
+export default Blogs
 
-const projects = [
+const blogs = [
   {
-    src: "https://picsum.photos/600/300?image=0",
+    src: "https://picsum.photos/400/300?image=0",
     image_alt: "People on laptops",
-    project_title: "Build Tools Collection",
-    project_link: "Build-Tools-Collection",
-    project_desc: "Build Tools Collection",
-    project_author: "David van Zyl",
+    blog_title: "Build Tools Collection",
+    blog_desc: "Build Tools Collection",
+    blog_author: "David van Zyl",
   },
   {
-    src: "https://picsum.photos/600/300?image=0",
+    src: "https://picsum.photos/400/300?image=0",
     image_alt: "People on laptops",
-    project_title: "Build Tools Collection",
-    project_link: "Build-Tools-Collection",
-    project_desc: "Build Tools Collection",
-    project_author: "David van Zyl",
+    blog_title: "Build Tools Collection",
+    blog_desc: "Build Tools Collection",
+    blog_author: "David van Zyl",
   },
   {
-    src: "https://picsum.photos/600/300?image=0",
+    src: "https://picsum.photos/400/300?image=0",
     image_alt: "People on laptops",
-    project_title: "Build Tools Collection",
-    project_link: "Build-Tools-Collection",
-    project_desc: "Build Tools Collection",
-    project_author: "David van Zyl",
+    blog_title: "Build Tools Collection",
+    blog_desc: "Build Tools Collection",
+    blog_author: "David van Zyl",
   },
   {
-    src: "https://picsum.photos/600/300?image=0",
+    src: "https://picsum.photos/400/300?image=0",
     image_alt: "People on laptops",
-    project_title: "Build Tools Collection",
-    project_link: "Build-Tools-Collection",
-    project_desc: "Build Tools Collection",
-    project_author: "David van Zyl",
+    blog_title: "Build Tools Collection",
+    blog_desc: "Build Tools Collection",
+    blog_author: "David van Zyl",
   },
 ]

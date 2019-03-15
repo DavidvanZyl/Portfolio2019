@@ -1,11 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 import "./project-card.scss"
 
 const ProjectCard = props => (
-  <div className="project">
-    <div className="project__image">
+  <Link to={`/projects`} className="project">
+    <div className="filtered">
       <img
         src={props.item.src}
         style={{ width: "100%" }}
@@ -13,7 +14,7 @@ const ProjectCard = props => (
       />
     </div>
     <p className="project__title">{props.item.project_title}</p>
-  </div>
+  </Link>
 )
 
 ProjectCard.propTypes = {
@@ -21,6 +22,7 @@ ProjectCard.propTypes = {
   image: PropTypes.any,
   image_alt: PropTypes.string,
   project_title: PropTypes.string,
+  project_link: PropTypes.string,
   project_desc: PropTypes.string,
   project_author: PropTypes.string,
 }
