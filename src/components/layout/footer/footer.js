@@ -19,7 +19,7 @@ const Footer = ({ siteTitle }) => (
         />
       </div>
       <div>
-        <SocialButton url="https://medium.com/" title="Medium" />
+        <SocialButton url="https://medium.com/@davidvz898" title="Medium" />
         <SocialButton url="mailto:info@davidvanzyl.io" title="Email me!" />
       </div>
     </SocialLinks>

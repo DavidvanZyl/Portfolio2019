@@ -7,7 +7,9 @@ export default class List extends React.Component {
   constructor(props) {
     super(props)
     const TagName = this.props.tag_name
-    this.list = this.props.items.map(item => <TagName item={item} />)
+    this.list = this.props.items.map(item => (
+      <TagName key={item.node.uid} item={item} />
+    ))
   }
 
   render() {

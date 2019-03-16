@@ -12,11 +12,12 @@ import BlogEntry from "../../components/blog-entry/blog-entry"
 const Blog = ({ data: { prismicBlog } }) => {
   const { data } = prismicBlog
   let blogContent = []
-  data.body.forEach(element => {
+  data.body.forEach((element, index) => {
     switch (element.__typename) {
       case "PrismicBlogBodyText":
         blogContent.push(
           <div
+            key={index}
             dangerouslySetInnerHTML={{ __html: element.primary.content.html }}
           />
         )
@@ -24,6 +25,7 @@ const Blog = ({ data: { prismicBlog } }) => {
       case "PrismicBlogBodyCodeBlock":
         blogContent.push(
           <div
+            key={index}
             dangerouslySetInnerHTML={{
               __html: element.primary.code_block.html,
             }}

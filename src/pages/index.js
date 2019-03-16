@@ -36,6 +36,13 @@ const IndexPage = ({ data: { allPrismicBlog, allPrismicProject } }) => {
 
 export const pageQuery = graphql`
   query {
+    prismicHomepage {
+      data {
+        cv {
+          url
+        }
+      }
+    }
     allPrismicBlog(sort: { order: DESC, fields: [data___date] }) {
       edges {
         node {
