@@ -28,14 +28,14 @@ exports[`Header renders correctly 1`] = `
         }
       }
     >
-      <ForwardRef
+      <a
         className="link"
-        to="/"
+        href="pdf/CV.pdf"
       >
         <strong>
           Download my CV
         </strong>
-      </ForwardRef>
+      </a>
     </p>
   </div>
 </header>

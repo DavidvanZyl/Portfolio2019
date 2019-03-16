@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogEntry renders correctly 1`] = `
+<div
+  className="hero"
+>
+  <div
+    className="filtered"
+  >
+    <img />
+  </div>
+  <div
+    className="hero__titleWrap"
+  >
+    <h1
+      className="hero__title"
+    />
+  </div>
+</div>
+`;

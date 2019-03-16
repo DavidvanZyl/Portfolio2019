@@ -1,18 +1,12 @@
 import React from "react"
-import PropTypes from "prop-types"
-
-import "./blog-entry.scss"
 import { Link } from "gatsby"
 
+import "./blog-entry.scss"
+
 const BlogEntry = props => (
-  <Link to={`/blogs`}>
-    <p className="blog">{props.item.blog_title}</p>
+  <Link to={`/blog/${props.item.node.uid}`}>
+    <p className="blog">{props.item.node.data.title.text}</p>
   </Link>
 )
-
-BlogEntry.propTypes = {
-  blog_desc: PropTypes.string,
-  blog_author: PropTypes.string,
-}
 
 export default BlogEntry

@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BlogEntry renders correctly 1`] = `
-<div
+<ForwardRef
   className="project"
+  to="/project/test"
 >
   <div
-    className="project__image"
+    className="filtered"
   >
     <img
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+      alt="test image"
+      src="test.jpg"
     />
   </div>
   <p
     className="project__title"
-  />
-</div>
+  >
+    test
+  </p>
+</ForwardRef>
 `;

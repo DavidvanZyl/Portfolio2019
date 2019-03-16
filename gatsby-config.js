@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `David van Zyl`,
@@ -7,6 +11,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `dvzportfolio2019`,
+        accessToken: `${process.env.PRISMIC_KEY}`,
+        linkResolver: ({ node, key, value }) => project => `/${project.uid}`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

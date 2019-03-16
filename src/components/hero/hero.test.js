@@ -1,9 +1,11 @@
 import React from "react"
-import BlogEntry from "./blog-entry"
+import Hero from "./hero"
 
 describe("BlogEntry", () => {
   test("renders correctly", () => {
-    const wrapper = shallow(<BlogEntry item={{ testItem: "test" }} />)
+    const wrapper = shallow(
+      <Hero item={{ title: "test", image: "test.jpg", alt: "test image" }} />
+    )
     expect(wrapper).toMatchSnapshot()
   })
 })

@@ -69,9 +69,9 @@
   &__image {
     max-width: unset;
     position: absolute !important;
-    top: -30%;
+    top: -28vh;
     transform: rotate(-20deg);
-    width: 200vw;
+    width: 180vw;
     z-index: -1;
     left: -120%;
     transform: translateX(80vw) rotate(160deg);
@@ -84,9 +84,9 @@
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   position: relative;
-  padding-bottom: calc(250px - 6vw);
+  padding-bottom: calc(100px - 1vw);
   &__title {
-    font-size: calc(4.5rem + 2vw);
+    font-size: calc(2.5rem + 6vw);
 
     &Wrap {
       grid-area: 1 / 1 / 1 / 1;
@@ -98,7 +98,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      height: calc(100% + (250px - 6vw));
+      height: calc(100% + (100px - 1vw));
     }
   }
 }
@@ -131,4 +131,11 @@
     right: 0;
     background: #ff00bc;
   }
+}
+
+pre {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem !important; //Override gatsby
+  border-radius: 10px;
+  overflow-x: scroll;
 }

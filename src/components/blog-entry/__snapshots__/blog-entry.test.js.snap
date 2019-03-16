@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BlogEntry renders correctly 1`] = `
-<p
-  className="blog"
-/>
+<ForwardRef
+  to="/blog/test"
+>
+  <p
+    className="blog"
+  >
+    test
+  </p>
+</ForwardRef>
 `;

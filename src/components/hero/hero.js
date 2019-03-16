@@ -6,7 +6,7 @@ import "./hero.scss"
 const Hero = props => (
   <div className="hero">
     <div className="filtered">
-      <img src="https://picsum.photos/800/400?image=0" alt="Test" />
+      <img src={props.image} alt={props.alt} />
     </div>
     <div className="hero__titleWrap">
       <h1 className="hero__title">{props.title}</h1>

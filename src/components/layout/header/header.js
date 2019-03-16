@@ -13,9 +13,9 @@ const Header = ({ siteTitle }) => (
         </Link>
       </p>
       <p style={{ margin: 0 }}>
-        <Link className="link" to="/">
+        <a className="link" href="pdf/CV.pdf">
           <strong>Download my CV</strong>
-        </Link>
+        </a>
       </p>
     </div>
   </header>
