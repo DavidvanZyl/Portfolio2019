@@ -133,9 +133,16 @@
   }
 }
 
-pre {
+.codeOverflow {
+  overflow-x: scroll;
   background: rgba(255, 255, 255, 0.2);
   padding: 1rem !important; //Override gatsby
   border-radius: 10px;
-  overflow-x: scroll;
+  width: 100%;
+
+  & pre {
+    margin: 0;
+    white-space: pre;
+    width: fit-content;
+  }
 }

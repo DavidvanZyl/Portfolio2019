@@ -25,6 +25,7 @@ const Blog = ({ data: { prismicBlog } }) => {
       case "PrismicBlogBodyCodeBlock":
         blogContent.push(
           <div
+            className="codeOverflow"
             key={index}
             dangerouslySetInnerHTML={{
               __html: element.primary.code_block.html,

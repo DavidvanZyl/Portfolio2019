@@ -13,6 +13,9 @@
       width: 100%;
       font-size: 1.3rem;
       color: #fff;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
   }
 

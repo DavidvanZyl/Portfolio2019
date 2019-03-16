@@ -26,6 +26,7 @@ const Project = ({ data: { prismicProject } }) => {
           }}
         />
         <div
+          className="codeOverflow"
           dangerouslySetInnerHTML={{
             __html: data.body[1].primary.code_block.html,
           }}

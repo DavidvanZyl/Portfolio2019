@@ -12,10 +12,11 @@ import "./index.scss"
 const IndexPage = ({ data: { allPrismicBlog, allPrismicProject } }) => {
   const blogsNodes = allPrismicBlog.edges
   const projectNodes = allPrismicProject.edges
+  console.log(allPrismicBlog)
   return (
     <Layout>
       <SEO
-        title="David van Zyl"
+        title="Home"
         description={"JavaScript Front-End Web Developer"}
         keywords={[`David van Zyl`, `Web Developer`, `JavaScript`, `React`]}
       />
@@ -50,6 +51,9 @@ export const pageQuery = graphql`
           data {
             title {
               text
+            }
+            link {
+              url
             }
             __typename
           }

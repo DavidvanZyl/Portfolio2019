@@ -16,8 +16,8 @@
 html {
   width: 100vw;
   box-sizing: border-box;
-  //  overflow-y: scroll;
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background: #000;
