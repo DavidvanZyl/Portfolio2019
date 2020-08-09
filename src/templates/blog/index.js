@@ -1,45 +1,47 @@
-import React from "react"
-import { graphql } from "gatsby"
+import './blog.scss';
 
-import Layout from "../../components/layout/layout"
-import SEO from "../../components/seo"
+import { graphql } from 'gatsby';
+import React from 'react';
 
-import "./blog.scss"
-import List from "../../components/component-list/component-list"
-import Hero from "../../components/hero/hero"
-import BlogEntry from "../../components/blog-entry/blog-entry"
+import Hero from '../../components/hero/hero';
+import Layout from '../../components/layout/layout';
+import SEO from '../../components/seo';
 
 const Blog = ({ data: { prismicBlog } }) => {
   const { data } = prismicBlog
   let blogContent = []
-  data.body.forEach((element, index) => {
-    switch (element.__typename) {
-      case "PrismicBlogBodyText":
-        blogContent.push(
-          <div
-            key={index}
-            dangerouslySetInnerHTML={{ __html: element.primary.content.html }}
-          />
-        )
-        break
-      case "PrismicBlogBodyCodeBlock":
-        blogContent.push(
-          <div
-            className="codeOverflow"
-            key={index}
-            dangerouslySetInnerHTML={{
-              __html: element.primary.code_block.html,
-            }}
-          />
-        )
-        break
-      default:
-        break
-    }
-  })
+  data.body &&
+    data.body.forEach((element, index) => {
+      switch (element.__typename) {
+        case "PrismicBlogBodyText":
+          blogContent.push(
+            <div
+              key={index}
+              dangerouslySetInnerHTML={{ __html: element.primary.content.html }}
+            />
+          )
+          break
+        case "PrismicBlogBodyCodeBlock":
+          blogContent.push(
+            <div
+              className="codeOverflow"
+              key={index}
+              dangerouslySetInnerHTML={{
+                __html: element.primary.code_block.html,
+              }}
+            />
+          )
+          break
+        default:
+          break
+      }
+    })
   return (
     <Layout>
-      <SEO title={data.title.text} keywords={data.description.split(" ")} />
+      <SEO
+        title={data.title.text}
+        keywords={data.description && data.description.split(" ")}
+      />
       <div className="blogPage">
         <Hero
           title={data.title.text}

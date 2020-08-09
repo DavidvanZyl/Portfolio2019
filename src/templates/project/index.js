@@ -1,13 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
+import './projects.scss';
 
-import Layout from "../../components/layout/layout"
-import SEO from "../../components/seo"
-import Hero from "../../components/hero/hero"
-import ProjectCard from "../../components/project-card/project-card"
-import List from "../../components/component-list/component-list"
+import { graphql } from 'gatsby';
+import React from 'react';
 
-import "./projects.scss"
+import Hero from '../../components/hero/hero';
+import Layout from '../../components/layout/layout';
+import SEO from '../../components/seo';
 
 const Project = ({ data: { prismicProject } }) => {
   const { data } = prismicProject
@@ -20,17 +18,21 @@ const Project = ({ data: { prismicProject } }) => {
           image={data.main_image.url}
           alt={data.main_image.alt}
         />
-        <div
-          dangerouslySetInnerHTML={{
-            __html: data.body[0].primary.content.html,
-          }}
-        />
-        <div
-          className="codeOverflow"
-          dangerouslySetInnerHTML={{
-            __html: data.body[1].primary.code_block.html,
-          }}
-        />
+        {data.body && (
+          <>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: data.body[0].primary.content.html,
+              }}
+            />
+            <div
+              className="codeOverflow"
+              dangerouslySetInnerHTML={{
+                __html: data.body[1].primary.code_block.html,
+              }}
+            />
+          </>
+        )}
       </div>
     </Layout>
   )

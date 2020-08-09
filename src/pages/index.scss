@@ -1,57 +1,22 @@
 .intro {
-  width: 100vw;
-  min-height: 800px;
-  margin-bottom: -10%;
-  position: relative;
+  width: 100%;
 
   @media (min-width: 768px) {
-    margin-bottom: 10%;
+    margin-bottom: 15%;
     height: unset;
-  }
-
-  &__circle {
-    background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(
-      30deg,
-      #000000 15%,
-      #851283 55%,
-      #ff00bc 100%
-    ); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      30deg,
-      #000000 15%,
-      #851283 55%,
-      #ff00bc 100%
-    ); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(
-      30deg,
-      #000000 15%,
-      #851283 55%,
-      #ff00bc 100%
-    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ff00c8',GradientType=1 );
-    margin: auto;
-    width: 75vw;
-    height: 75vw;
-    border-radius: 50%;
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 8%;
   }
 
   &__title {
     letter-spacing: 1rem;
     padding-left: 1rem;
-    width: 10.5rem;
-    text-shadow: -4px 2px 0 #c2018e, -7px 6px 0 #0a0e27;
+    text-shadow: -4px 0 0 #c2018e, -7px 0 0 #0a0e27;
 
     @media (min-width: 1024px) {
       letter-spacing: 3rem;
-      width: 19.5rem;
     }
 
     & h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       line-height: 5rem;
       text-align: justify;
 
@@ -69,13 +34,17 @@
   &__image {
     max-width: unset;
     position: absolute !important;
-    top: -28vh;
+    top: 1vh;
     transform: rotate(-20deg);
     width: 180vw;
     z-index: -1;
     left: -120%;
-    transform: translateX(80vw) rotate(160deg);
+    transform: translateX(160vw) rotate(-90deg);
     overflow: visible;
+
+    @media (max-width: 950px) {
+      display: none;
+    }
   }
 }
 
@@ -103,6 +72,25 @@
   }
 }
 
+.fadeIn-appear {
+  opacity: 0.01;
+}
+
+.fadeIn-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity 2.5s ease-in;
+}
+
+.linkTitle {
+  display: flex;
+  & img {
+    filter: invert(1);
+    height: 16px;
+    width: auto;
+    margin-right: 5px;
+  }
+}
+
 .filtered {
   position: relative;
   width: 100%;
@@ -110,6 +98,10 @@
   border-radius: 10px;
   overflow: hidden;
   grid-area: 1 / 1 / 1 / 1;
+  border: 1px solid #ff00bc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   & img {
     filter: contrast(120%);
@@ -117,6 +109,17 @@
     width: 100%;
     height: auto;
     margin: 0;
+  }
+
+  &.item img {
+    width: auto;
+    height: 100%;
+    max-height: 143px;
+  }
+
+  &:hover:before {
+    background-color: #ff00bbbe;
+    transition: all ease-in-out 0.3s;
   }
 
   &:before {
@@ -129,7 +132,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #ff00bc;
+    background-color: transparent;
   }
 }
 

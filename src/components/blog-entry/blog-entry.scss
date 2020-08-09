@@ -1,7 +1,14 @@
 .blog {
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
   border-bottom: 2px solid #ff00bc;
   min-width: 100%;
+
+  &:hover {
+    background-color: #ff00bc;
+    color: #000;
+    border-bottom: 2px solid black;
+    transition: all ease-in 0.3s;
+  }
 
   p {
     margin: 0;

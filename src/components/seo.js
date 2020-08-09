@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { StaticQuery, graphql } from "gatsby"
+import { graphql, StaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import Helmet from 'react-helmet';
 
 function SEO({ description, lang, meta, keywords, title }) {
   return (
@@ -10,8 +10,7 @@ function SEO({ description, lang, meta, keywords, title }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
-        const viewPortDescription =
-          "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        const viewPortDescription = "width=device-width, initial-scale=1"
         return (
           <Helmet
             htmlAttributes={{
@@ -58,7 +57,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
             ]
               .concat(
-                keywords.length > 0
+                keywords && keywords.length > 0
                   ? {
                       name: `keywords`,
                       content: keywords.join(`, `),

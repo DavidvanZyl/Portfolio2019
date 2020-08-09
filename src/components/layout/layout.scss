@@ -1,20 +1,23 @@
 @font-face {
+  font-display: swap;
   font-family: "Mosk";
   src: url("../../assets/typeface/Mosk\ Normal\ 400.ttf");
+  font-weight: 400;
 }
 @font-face {
+  font-display: swap;
   font-family: "Mosk";
   src: url("../../assets/typeface/Mosk\ Medium\ 500.ttf");
   font-weight: 500;
 }
 @font-face {
+  font-display: swap;
   font-family: "Mosk";
   src: url("../../assets/typeface/Mosk\ Semi-Bold\ 600.ttf");
   font-weight: 600;
 }
 
 html {
-  width: 100vw;
   box-sizing: border-box;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -39,7 +42,6 @@ body {
   display: grid;
   position: relative;
   justify-items: center;
-  width: 100vw;
   min-height: 100vh;
   grid-template-columns: 100%;
   grid-template-rows: 60px 1fr auto;

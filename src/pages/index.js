@@ -1,18 +1,17 @@
-import React from "react"
-import ProjectCard from "./../components/project-card/project-card"
-import BlogEntry from "./../components/blog-entry/blog-entry"
-import List from "./../components/component-list/component-list"
-import Layout from "./../components/layout/layout"
-import SEO from "./../components/seo"
+import './index.scss';
 
-import topography from "./../images/topography.png"
+import React from 'react';
 
-import "./index.scss"
+import BlogEntry from './../components/blog-entry/blog-entry';
+import List from './../components/component-list/component-list';
+import Layout from './../components/layout/layout';
+import ProjectCard from './../components/project-card/project-card';
+import SEO from './../components/seo';
+import topography from './../images/topography.png';
 
 const IndexPage = ({ data: { allPrismicBlog, allPrismicProject } }) => {
   const blogsNodes = allPrismicBlog.edges
   const projectNodes = allPrismicProject.edges
-  console.log(allPrismicBlog)
   return (
     <Layout>
       <SEO
@@ -21,12 +20,11 @@ const IndexPage = ({ data: { allPrismicBlog, allPrismicProject } }) => {
         keywords={[`David van Zyl`, `Web Developer`, `JavaScript`, `React`]}
       />
       <div className="intro">
-        <img className="intro__image" src={topography} alt="" />
-        <div className="intro__circle">
-          <div className="intro__title">
-            <h1>DAVID</h1>
-            <h1>PORTFOLIO</h1>
-          </div>
+        <img className="intro__image" src={topography} alt="" key="1" />
+        <div className="intro__title">
+          <h1>DAVID</h1>
+          <h1>VAN ZYL</h1>
+          <h1>WEB ENGINEER</h1>
         </div>
       </div>
       <List list_title="Projects" tag_name={ProjectCard} items={projectNodes} />
@@ -67,6 +65,9 @@ export const pageQuery = graphql`
           data {
             title {
               text
+            }
+            link {
+              url
             }
             item_image {
               url
